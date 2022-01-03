@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "module": "lib/index.boring-react-chart.js",
   "types": "lib/index.d.ts",
+  "files": ["lib"],
   "repository": {
     "type": "git",
     "url": "https://github.com/vukolovanton/boring-react-chart"
