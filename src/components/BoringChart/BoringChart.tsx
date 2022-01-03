@@ -12,14 +12,16 @@ interface BoringChartProps {
 	tooltipSelector: string;
 }
 
-const BoringChart: React.FC<BoringChartProps> = ({
-	columnDetails,
-	xData,
-	yData,
-	rootSelector,
-	canvasSelector,
-	tooltipSelector,
-}) => {
+const BoringChart: React.FC<BoringChartProps> = (props) => {
+	const {
+		columnDetails,
+		xData,
+		yData,
+		rootSelector,
+		canvasSelector,
+		tooltipSelector,
+	} = props;
+
 	React.useEffect(() => {
 		const tgChart = new ChartConstructor(columnDetails, xData, yData, {
 			rootSelector,
