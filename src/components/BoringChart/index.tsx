@@ -1,0 +1,1 @@
+export { BoringChart } from './BoringChart';
