@@ -19,11 +19,11 @@ export default {
 			format: 'esm',
 			sourcemap: true,
 		},
-		// {
-		// 	file: packageJson.types,
-		// 	format: 'esm',
-		// 	sourcemap: true,
-		// },
+		{
+			file: packageJson.types,
+			format: 'cjs',
+			sourcemap: true,
+		},
 	],
 	plugins: [
 		peerDepsExternal(),
