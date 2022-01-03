@@ -21,7 +21,7 @@ export default {
 		},
 		{
 			file: packageJson.types,
-			format: 'cjs',
+			format: 'es',
 			sourcemap: true,
 		},
 	],

@@ -1,13 +1,5 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-var jsxRuntime = require('react/jsx-runtime');
-var React = require('react');
-
-function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
-
-var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
+import { jsx, jsxs } from 'react/jsx-runtime';
+import React from 'react';
 
 function styleInject(css, ref) {
   if ( ref === void 0 ) ref = {};
@@ -311,7 +303,7 @@ class ChartConstructor {
 
 const BoringChart = (props) => {
     const { columnDetails, xData, yData, rootSelector, canvasSelector, tooltipSelector, } = props;
-    React__default["default"].useEffect(() => {
+    React.useEffect(() => {
         const tgChart = new ChartConstructor(columnDetails, xData, yData, {
             rootSelector,
             canvasSelector,
@@ -319,8 +311,8 @@ const BoringChart = (props) => {
         });
         tgChart.init();
     }, []);
-    return (jsxRuntime.jsx("div", Object.assign({ className: style.card }, { children: jsxRuntime.jsxs("div", Object.assign({ className: style.innerContainer, id: "chart" }, { children: [jsxRuntime.jsx("div", { "data-el": "tooltip", className: style.tooltip }, void 0), jsxRuntime.jsx("canvas", {}, void 0)] }), void 0) }), void 0));
+    return (jsx("div", Object.assign({ className: style.card }, { children: jsxs("div", Object.assign({ className: style.innerContainer, id: "chart" }, { children: [jsx("div", { "data-el": "tooltip", className: style.tooltip }, void 0), jsx("canvas", {}, void 0)] }), void 0) }), void 0));
 };
 
-exports.BoringChart = BoringChart;
+export { BoringChart };
 //# sourceMappingURL=index.d.ts.map
