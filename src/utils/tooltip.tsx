@@ -58,7 +58,7 @@ export function getTooltip(el: HTMLElement): TooltipFunction {
 			css(el, {
 				display: 'block',
 				top: top - height + 'px',
-				left: left + width / 2 + 'px',
+				left: left + width / 8 + 'px',
 			});
 			el.insertAdjacentHTML('afterbegin', template(data));
 		},

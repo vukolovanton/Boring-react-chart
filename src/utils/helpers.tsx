@@ -32,8 +32,7 @@ export function circle(
 ) {
 	context.beginPath();
 	context.strokeStyle = color;
-	// context.fillStyle = '#fff';
-	context.lineWidth = 4;
+	context.lineWidth = 2;
 	context.arc(x, y, CIRCLE_RADIUS, 0, Math.PI * 2);
 	context.fill();
 	context.stroke();

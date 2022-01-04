@@ -115,6 +115,13 @@ export class ChartConstructor {
 			for (const [x, y] of coordinates) {
 				if (isMouseOver(this.proxy.mouse, x, coordinates.length)) {
 					circle(this.context, x, y, color);
+					this.context.beginPath();
+					this.context.lineWidth = 2;
+					this.context.strokeStyle = this.columnDetails[index].color;
+					this.context.moveTo(0, y);
+					this.context.lineTo(DPI_WIDTH, y);
+					this.context.stroke();
+					this.context.closePath();
 					break;
 				}
 			}
@@ -126,7 +133,7 @@ export class ChartConstructor {
 		const textStep = (yMax - yMin) / ROWS_COUNT;
 
 		this.context.beginPath();
-		this.context.lineWidth = 1;
+		this.context.lineWidth = 0.2;
 		this.context.strokeStyle = '#bbb';
 		for (let i = 1; i <= ROWS_COUNT; i++) {
 			const y = step * i;
@@ -160,6 +167,7 @@ export class ChartConstructor {
 				this.context.save();
 				this.context.moveTo(x, PADDING / 2);
 				this.context.lineTo(x, DPI_HEIGHT - PADDING);
+
 				this.context.restore();
 				this.tooltip.show(this.proxy.mouse.tooltip, {
 					title: formatLabel(xData[i], FORMAT_TYPES.DATE),

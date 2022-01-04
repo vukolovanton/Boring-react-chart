@@ -7,9 +7,9 @@ interface BoringChartProps {
 	columnDetails: ColumnDetails[];
 	xData: any;
 	yData: any;
-	rootSelector: string;
-	canvasSelector: string;
-	tooltipSelector: string;
+	rootSelector?: string;
+	canvasSelector?: string;
+	tooltipSelector?: string;
 }
 
 const BoringChart: React.FC<BoringChartProps> = (props) => {
@@ -17,9 +17,9 @@ const BoringChart: React.FC<BoringChartProps> = (props) => {
 		columnDetails,
 		xData,
 		yData,
-		rootSelector,
-		canvasSelector,
-		tooltipSelector,
+		rootSelector = 'root',
+		canvasSelector = 'canvas',
+		tooltipSelector = '[data-el="tooltip"]',
 	} = props;
 
 	React.useEffect(() => {
@@ -29,6 +29,8 @@ const BoringChart: React.FC<BoringChartProps> = (props) => {
 			tooltipSelector,
 		});
 		tgChart.init();
+
+		return () => tgChart.destroy();
 	}, []);
 
 	return (
