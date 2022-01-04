@@ -1,14 +1,13 @@
 # Boring react chart
 
 ### React library for simple boring chart.
-
+<img width="1336" alt="Снимок экрана 2022-01-04 в 16 02 56" src="https://user-images.githubusercontent.com/53794193/148056614-07642c6f-dfdf-4367-8dc1-a297d4d755bb.png">
 ## Usage
 
 ```
 npm install boring-react-chart
 yarn add boring-react-chart
 ```
-
 ```jsx
 import { BoringChart } from 'boring-react-chart';
 
